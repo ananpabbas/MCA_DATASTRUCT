@@ -1,0 +1,46 @@
+-- 
+-- Roll No:05
+-- Name:ANAN P ABBAS
+-- Program: <program name>
+-- 
+
+
+--
+-- Table structure for table departments
+--
+
+-- ---------create/alter statement commands----------- # This line may be removed in the actual file
+create table departments(dno int primary key,dname varchar(50) not null);
+create table students(studentid int,name varchar(100),course varchar(50),age int);
+
+
+
+-- Table structure for table <bookissues>
+--
+Create  table bookissues(bookid integer ,studentid integer,issue_date date ,return_date date ,fine decimal(5,2)Default 0.00);
+
+-- Table structure for table students
+--
+create table students(studentid int,name varchar(100),course varchar(50),age int);
+
+
+alter table students drop course;
+alter table students add dno int;
+alter table students add constraint styudents_fkey_dno foreign key(dno)references department (dno);
+
+
+
+--
+-- Dumping data for table departments
+--
+ insert into departments value(1,'MCA');
+
+-- --------insert/update statement commands----------- # This line may be removed in the actcual file
+
+--
+-- SQl Query Statements
+--
+
+-- -----SQL query statments preceeded by the its question-------- # This line may be removed in the actual file
+-- -----Question number should be commented---------------#This line may be removed in the actual file
+
